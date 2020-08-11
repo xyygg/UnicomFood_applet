@@ -1,0 +1,14 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  
+} 
+button::after{border: none;}
+
+
+.button01{ border-radius: 50px;  background-image: linear-gradient(to right, #52c396 , #27a260);
+width: 500rpx; margin:0 auto; display: block; color: #fff; overflow: hidden;box-shadow: 0 3px 10px rgba(78,180,140,0.5)}
+
+.wxParser{ line-height:1.4rem; padding:15rpx 40rpx;font-size: 0.95rem; color: #555}
+.wxParser-p text,.wxParserText{word-break: break-all;}
+.wxParser-p image,.wxParser-section ,image{max-width:100%;}

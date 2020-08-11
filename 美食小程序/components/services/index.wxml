@@ -1,0 +1,11 @@
+<view class="kefu" bindtap="dispaly">
+  <image src="../../assets/image/kefu.jpg"></image>
+  <text>客服</text>
+</view>
+<view class="layer {{ishow?'active':''}}" bindtap="dispaly" catchtouchmove="catchtouchmove">
+  <view class="layercontent">
+    <image class="headImg"  src="{{kefuHeadimg}}"></image>
+    <image class="codeImg" src="{{qrcode}}" catchlongtap='saveImg'></image>
+    <view class="codeTxt">长按保存二维码，添加专属客服，进行详细咨询</view>
+  </view>
+</view>

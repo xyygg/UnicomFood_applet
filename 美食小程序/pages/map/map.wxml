@@ -1,0 +1,32 @@
+<!--index.wxml-->
+
+<map class='map' id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="12" markers="{{markers}}" bindmarkertap="markertap" bindcallouttap="markertap" bindtap="tap" show-location>
+
+  <cover-view class="bottom {{show ? 'on' : ''}}" >
+    <cover-image mode="Widthfix" src="../../assets/image/close.png" class='close' bindtap="close"> </cover-image>
+    <cover-view class="view01" bindtap="productDetail" data-id="{{shopId}}">
+  
+      <cover-view class='imgdiv' >
+        <cover-image mode="aspectFill" src="{{img}}" class='image'>
+        </cover-image>
+      </cover-view>
+
+      <cover-view class="view02">
+        <cover-view class="h1">
+          {{title}}
+        </cover-view>
+        <cover-view class='address'>
+          {{address}}
+        </cover-view>
+
+      </cover-view>
+
+
+    </cover-view>
+    <cover-view>
+      <button class='butto01' bindtap='openLocation'>去这里</button>
+    </cover-view>
+
+  </cover-view>
+
+</map>

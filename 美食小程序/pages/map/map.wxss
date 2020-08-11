@@ -1,0 +1,56 @@
+/**index.wxss**/
+cover-view{white-space:normal }
+cover-image{ height: auto}
+.map{ width: 100%;  position: fixed;  left: 0; height: 100%}
+
+
+.search{ position: fixed; top: 0; width: 100%; z-index: 10000;
+align-items: center;justify-content: center;}
+
+.search_cont{background:rgba(255,255,255,.95); display: flex;align-items: center;-webkit-box-pack: center;justify-content: center;
+ overflow: hidden; line-height: 80rpx; height: 80rpx; color: #999;
+ border-radius: 5px; font-size: 0.85rem; box-shadow: 0 0 10px rgba(0,0,0,.15);
+  margin:20rpx 40rpx;  border: 1px solid #e5e5e5;}
+.search_cont .searchimage{ width:40rpx; display: block; padding-left:40rpx; padding-right: 20rpx}
+.search_text{ flex: 1; line-height: 80rpx; font-size: 0.95rem  }
+
+.search input{ width:90%; margin: 0rpx auto; border-radius: 5px; padding-left: 60rpx;
+ background:none; line-height:30rpx; padding: 10rpx 0 10rpx 5% }
+
+
+
+ .bottom{ background: #fff; position: fixed; bottom: 0; width: 100%; left: 0;
+  border-radius:10px 10px 0 0; box-shadow: 0 -1px 3px rgba(0,0,0,.15);
+  -webkit-transform: translate(0,200%);transform:translate(0,200%);transition: all 0.5s;
+-moz-transition: all 0.5s;	/* Firefox 4 */
+-webkit-transition: all 0.5s;	/* Safari 和 Chrome */
+-o-transition: all 0.5s; padding-top: 20rpx; }
+ .bottom.on{  -webkit-transform: translate(0,0);transform:translate(0,0);
+ transition: all 0.5s;
+-moz-transition: all 0.5s;	/* Firefox 4 */
+-webkit-transition: all 0.5s;	/* Safari 和 Chrome */
+-o-transition: all 0.5s;}
+
+.close{ position: absolute; top: 14rpx; right: 14rpx;width: 50rpx; height: 50rpx; z-index: 2000}
+
+
+
+.view01{display: flex; margin: 30rpx 40rpx;
+align-items: center;-webkit-box-pack: center;justify-content: center;}
+
+.view01 .imgdiv{  width:140rpx; height: 140rpx;  border-radius: 5px; margin-right: 20rpx;
+ overflow: hidden}
+.view01 .imgdiv .image{width:auto; min-height:140rpx; display: block; height: 100%;}
+
+.view02{ flex: 1;}
+.h1{ font-size: 0.95rem; color: #555; line-height: 46rpx; padding-bottom: 10rpx}
+.address{ font-size: 0.8rem; color: #888;line-height: 36rpx;}
+
+.butto01{ margin: 0 40rpx 30rpx; background: #fd1515;color: #fff}
+.butto01 .button-hover{background: #e80303;}
+
+
+ @-webkit-keyframes bottom{
+0% {-webkit-transform: translate(0,200%);transform:translate(0,200%);}
+100% { -webkit-transform: translate(0,0);transform:translate(0,0);}
+}

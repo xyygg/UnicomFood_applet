@@ -1,0 +1,83 @@
+<!--pages/product.wxml-->
+<view class="loadingP" catchtouchmove="catchtouchmove" wx:if="{{showLoading}}">
+  <view id="preloader"  >
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+
+
+
+<view class="container">
+  <view class="bor-radius detailTop">
+      <swiper  indicator-dots  class="detailImg">
+        <block wx:for="{{swiperList}}" wx:key="index">
+          <swiper-item>
+            <view class="swiper-item">
+              <image src="{{baseUrl}}{{item}}" class="imgUrl"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="detailSelect">
+        <text class="{{int==0?'activeAct':''}}" bindtap="actclick" data-index='0'>详情</text>
+        <text class="{{int==1?'activeAct':''}}" bindtap="actclick" data-index='1'>活动须知</text>
+      </view>
+      <view class="detailTxt" wx:if="{{int==0}}">
+        <import src="../../wxParser/index.wxml" />
+        <view class="wxParser">
+          <template is="wxParser" data="{{ wxParserData:richText1.nodes }}" />
+        </view>
+      </view>
+      <view class="detailTxt" wx:if="{{int==1}}">
+        <import src="../../wxParser/index.wxml" />
+        <view class="wxParser">
+          <template is="wxParser" data="{{ wxParserData:richText2.nodes }}" />
+        </view>
+      </view>
+		</view>
+    <view class="yuyueBtn" bindtap="yuyuePoup" wx:if="{{isShow}}">我要预约</view>
+    <view class="goodPro" wx:if="{{isShow}}">
+      <view class="goodTxt">好物推荐</view>
+      <view class="bor-radius goodItem">
+        <image class="headimg" src="{{baseUrl}}{{storeImg}}" data-id="{{shopId}}" bindtap="shopDetail"></image>
+        <view class="storeXin" data-id="{{shopId}}" bindtap="shopDetail">
+          <view class="storeIcon"><image src="../../assets/image/store.png"></image>店铺</view>
+          <view class="storeName">{{storeName}}</view>
+        </view>
+        <image class="phone" src="../../assets/image/phone.jpg" data-num="{{storePhone}}" bindtap="phones"></image>
+      </view>
+    </view>
+    <view class="bor-radius moreBtn" bindtap="goIndex">
+      更多好物<text class="iconfont iconyoujiantou" ></text>
+    </view>
+  
+
+    <view class="layer {{ishowForm?'active':''}}" catchtouchmove="catchtouchmove">
+      
+      <form class="layercontent layFrom" bindsubmit='formSubmit'>
+        <image src="../../assets/image/close.png" class="closeBtn" bindtap="closeLay"> </image>
+        <view class="layitem">
+          <text class="textstyle">姓 名  </text>
+          <input type="text" class="inptstyle" name="loginNum" value="{{loginname}}" bindblur="loginInpt"/>
+        </view>
+        <view class="layitem">
+          <text class="textstyle">手机号</text>
+          <input type="text" class="inptstyle" name="phone" value="{{phone}}" bindblur="phone"/>
+         
+        </view>
+        <!-- <view class="sendYzm">
+          <view class="layitem codeitemstyle">
+            <text class="textstyle">验证码</text>
+            <input type="text" class="inptstyle" maxlength="4" name="code" value="{{code}}" bindblur='codeNum'/>
+            <text class="codeBtn" wx:if="{{!isShow}}" bindtap="getcode">获取验证码</text>
+            <text class="codeBtn count" wx:if="{{isShow}}">{{countTime}}s</text>
+          </view>
+        </view> -->
+        <button class="submitbtn" formType="submit">提交</button>
+      </form>
+    </view>
+    <service qrcode="{{qrcode}}" kefuHeadimg="{{kefuHeadimg}}"/>
+</view>

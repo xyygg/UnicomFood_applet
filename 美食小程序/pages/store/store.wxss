@@ -1,0 +1,31 @@
+/* pages/store/store.wxss */
+@import "../../style.wxss";
+.contain{background: #ededed;}
+.storeDetail{padding: 4vw;background: #fff;margin-bottom: 20px;}
+.storeIcon{display: flex;align-items: center;font-size: 14px;margin-bottom: 10px;}
+.icons{width:20px;height:20px;margin-right: 10rpx;}
+.storeNames{white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.detailImg{width:100%;overflow: hidden;height:40vw;max-height: 280px;}
+.swiper-item{height:100%;}
+.swiper-item image{display: block;width:100%;height:100%;border-radius: 10rpx; }
+.storeAdress{display: flex;justify-content: space-between;align-items: center;padding: 20px 10px 0 0;}
+.storeAdress .addicon{display:block;width:43rpx;height:43rpx;}
+.storeAdress .phoneicon{width:49rpx;height:49rpx;}
+.adressTxt{flex: 1;margin:0 20rpx;font-size: 12px;border-right: 1px solid #eee;}
+.adressTxt text{display: block;margin-bottom: 5px;}
+.adressTxt text:nth-child(1){font-size: 14px;}
+.adressTxt text:nth-child(2){color: #ababab}
+
+.storeCheep{color: #000;font-size: 16px;background: #fff;padding:10px 3%;}
+.syList{width:94%;padding: 0 3% 20px;background: #fff;}
+.syList::after{content: "";display: block;overflow: hidden;visibility: hidden;height:0;clear: both}
+.syList .syListDl{width:calc(50% - 5px );display: inline-block;margin-bottom: 15px;}
+.syList .syListDl:nth-child(odd){ float: left; }
+.syList .syListDl:nth-child(even){ float: right; }
+.syList .syListDt{width:100%;border-radius: 10px;overflow: hidden;height:30vw;margin-bottom: 5px;max-height:222px;position: relative}
+.syList .syListDt image{display: block;width:100%;height: 100%;}
+.syList .syListDt .storePrice{width:92%;position:absolute;bottom: 0;left:0;padding: 10rpx 4%;background: rgba(255,255,255,0.8);display: flex;justify-content: space-between;align-items: center;font-size: 24rpx;}
+.syList .syListDt .storePrice .priceTxt{color: #666;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+
+
+

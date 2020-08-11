@@ -1,0 +1,61 @@
+<!--pages/store/store.wxml-->
+<view class="loadingP" catchtouchmove="catchtouchmove" wx:if="{{showLoading}}">
+  <view id="preloader"  >
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+<view class="contain">
+  <view class="storeDetail">
+    <view class="storeIcon">
+      <image class="icons" src="../../assets/image/store.png"></image>
+      <text class="storeNames">{{storeName}}</text>
+    </view>
+    <swiper  indicator-dots  class="detailImg">
+        <block wx:for="{{swiperList}}" wx:key="index">
+          <swiper-item>
+            <view class="swiper-item">
+              <image src="{{baseUrl}}{{item}}" class="imgUrl"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="storeAdress" >
+        <image class="addicon" src="../../assets/image/address.png" bindtap="map"></image>
+        <view class="adressTxt" bindtap="map">
+          <text>{{addr}}</text>
+          <text>{{addrdescribe}}</text>
+        </view>
+        <image class="phoneicon" src="../../assets/image/phoneicon.png" data-phone="{{shopPhone}}" bindtap="phones"></image>
+      </view>
+  </view>
+  <view class="storeCheep">商家优惠</view>
+  <view class="syList clear">
+     
+      <view class="syListDl" bindtap="detail" wx:for="{{syList}}" wx:key="index" data-id="{{item.id}}">
+        <view class="syListDt">
+          <image src="{{baseUrl}}{{item.img}}" ></image>
+          <view class="storePrice">
+              <text class="priceTxt">{{item.title}}</text>
+              
+          </view>
+        </view>
+        
+      </view>
+      
+	</view>
+  <view class="moreloading">
+    <view class="moreBtn" wx:if="{{more}}">
+      下拉加载更多<text class="iconfont iconxiajiantou" ></text>
+    </view>
+    <view class="moreBtn" wx:if="{{moreloading}}">
+      加载中<image src="../../assets/image/loading.gif"></image>
+    </view>
+    <view class="nomore" wx:if="{{nomore}}">
+      <text>我是有底线的</text>
+    </view>
+  </view>
+</view>
+<service qrcode="{{qrcode}}" kefuHeadimg="{{kefuHeadimg}}"/>

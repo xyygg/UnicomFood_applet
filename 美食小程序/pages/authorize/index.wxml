@@ -1,0 +1,9 @@
+<view class="app-container">
+	<i-message id="message" />
+	<i-toast id="toast" />
+	<i-toast id="loading" />
+	<view class="logo w-100p h-200">
+		<image src="../../assets/image/ltban.png"></image>
+	</view>
+	<button open-type="getUserInfo" class="button" lang="zh_CN" bind:getuserinfo="onGotUserInfo">欢迎进入异业商盟</button>
+</view>

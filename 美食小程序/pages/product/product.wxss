@@ -1,0 +1,46 @@
+/* pages/product.wxss */
+@import "../../style.wxss";
+.container{background: #f3f3f3;padding: 30rpx}
+.bor-radius{background: #fff;border-radius: 10px;padding:3vw;}
+
+.detailImg{width:100%;overflow: hidden;height:40vw;max-height: 280px;}
+.swiper-item{height:100%;background: #eee;}
+.swiper-item image{display: block;width:100%;height:100%;border-radius: 10rpx; }
+.detailSelect{padding:20px 0 0;border-bottom: 1px solid #e5e5e5;display: flex;justify-content: center;}
+.detailSelect text{display: inline-block;margin:0 10%;color: #333;padding-bottom: 10px;}
+.activeAct{font-weight: 600;font-size: 16px;border-bottom: 2px solid #ff5151;}
+.detailTxt{padding: 20px 0 0;}
+.detailTxt .titles{display:block;font-weight: 900;margin-bottom: 10px;}
+.titletxt{margin-bottom: 20px}
+
+.yuyueBtn{width:100%;text-align: center;height:80rpx;line-height: 80rpx;color: #fff;border-radius: 5px;font-size: 16px;background: #ff5151;margin:15px 0;}
+.goodPro,.goodTxt{margin-bottom: 10px;}
+.goodTxt{font-weight: 900;}
+.goodItem{display: flex;justify-content: space-between;align-items: center;height: auto;}
+.headimg{height:175rpx;width:175rpx;}
+.phone{width:44rpx;height:44rpx;border-radius: 5rpx;}
+.storeXin{flex: 1;height:175rpx;margin:0 20rpx 20rpx}
+.storeIcon{color:#fe5051;display: flex;align-items: center;}
+.storeIcon image{width:30rpx;height:30rpx;margin-right: 10rpx;}
+.storeName{font-weight: 600;color:#000;font-size: 14px;text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  align-content: center;
+}
+.moreBtn{text-align: center;}
+
+.closeBtn{position: absolute;width: 48rpx;height:48rpx;right:8rpx;top:8rpx;z-index: 1000;}
+.layFrom{padding:70rpx 40rpx 40rpx;position: relative}
+.layitem{padding:10rpx 24rpx;border:1px solid #d6d6d6;margin-bottom: 24rpx;display: flex;justify-content: flex-start;border-radius: 5px}
+.inptstyle{flex: 1;height:50rpx;line-height: 50rpx;color:#000;}
+.textstyle{text-align:justify;min-width:120rpx; overflow:hidden;height:50rpx;margin-right: 15rpx;line-height: 50rpx;color:#666;}
+.textstyle:after{content:"";display:inline-block;width:100%; }
+
+.sendYzm{display: flex;justify-content:space-between;align-items: center;margin-bottom: 24rpx;}
+.codeitemstyle{flex: 1;margin-bottom: 0;position: relative}
+.codeBtn{color:#fff;text-align: center;border-radius: 10rpx;background: #ff5152;font-size:28rpx;line-height: 50rpx;overflow: hidden;position: relative;padding:0 10rpx}
+.count{background: #ccc;}
+.submitbtn{display:block;width:100%;background: #ff5152;color:#fff;border:none;margin-top: 40rpx;}

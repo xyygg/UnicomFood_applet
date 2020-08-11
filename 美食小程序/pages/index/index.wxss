@@ -1,0 +1,35 @@
+/**index.wxss**/
+@import "../../style.wxss";
+.contain01{padding-top: 35px;}
+.footTop{width:94%;padding: 0 3% 5px ;position: fixed;height:28px; overflow: hidden;top:0; z-index: 100;background: #fff;}
+.navList{width: 95%;white-space: nowrap; overflow-x: auto;padding-right: 5%;}
+.navList::-webkit-scrollbar {
+  display: none;
+}
+.navItem{display: inline-block;margin:0 10px;padding-bottom: 5px}
+.navItemact{border-bottom:2px solid #ff5151;color:#ff5151;font-weight: 600}
+.jticon{position: absolute;top:-5px;right:0rpx;font-size: 30px;background: #fff;}
+.htauto{height:auto;}
+
+.swiperMain{position: relative}
+.swiperH{width:100%;height: 360rpx}
+.swiper-item{height:100%;}
+.swiperH .imgUrl{width:100%;display: block;height:100%;}
+.searchCon{width:94%;height:30px;background: rgb(255, 255,255,.8);position: absolute;top:15px;left:3%;display: flex;justify-content: space-between;align-items: center;border-radius: 15px;}
+.searchCon icon{margin:0 30rpx 0 20rpx;color: #999;}
+.searchCon input{flex: 1;color: #000}
+
+.clear{clear: both}
+.syList{width:94%;padding: 20px 3% 20px;}
+.syList::after{content: "";display: block;overflow: hidden;visibility: hidden;height:0;clear: both}
+.syList .syListDl{width:calc(50% - 5px );display: inline-block;margin-bottom: 15px;}
+.syList .syListDl:nth-child(odd){ float: left; }
+.syList .syListDl:nth-child(even){ float: right; }
+.syList .syListDt{width:100%;border-radius: 10px;overflow: hidden;height:30vw;margin-bottom: 5px;max-height:222px;}
+.syList .syListDt image{display: block;width:100%;height: 100%;}
+.syList .syListTitle .text{display:block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;margin-top: 5px;}
+.syList .syListTitle .text:nth-child(1){color:#333;font-size: 16px;font-weight: 600;}
+.syList .syListTitle .text:nth-child(2){font-size: 14px;color:#999}
+.syList .syListTitle .text:nth-child(3){color:#868686;display: flex;align-items: center}
+.syList .syListTitle .text:nth-child(3) image{width:20px;height:20px;}
+

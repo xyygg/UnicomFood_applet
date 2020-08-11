@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/product/product",
+    "pages/store/store",
+    "pages/authorize/index",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "service": "./components/services/index"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于获取活动信息"
+    }
+  }
+}

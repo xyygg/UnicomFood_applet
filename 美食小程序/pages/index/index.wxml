@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="loadingP" catchtouchmove="catchtouchmove" wx:if="{{showLoading}}">
+  <view id="preloader"  >
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+<view class="container contain01">
+   
+  <view class="footTop ">
+    <view class="navList">
+      <text wx:for="{{navList}}" wx:key="index"  
+        data-index="{{index}}" data-name="{{item.id}}"
+        bindtap="seclctNav" class="navItem {{currentIndex==index?'navItemact':''}}"
+      >{{item.name}}
+      </text>
+    </view>
+    
+    <view class="iconfont jticon {{iconshow?'iconyoujiantou':''}}"></view>
+  </view>
+  <view class="swiperMain">
+      <swiper  indicator-dots class="swiperH" indicator-color="#fff" indicator-active-color="#fded20">
+        <block wx:for="{{swiperList}}" wx:key="index">
+          <swiper-item >
+            <view class="swiper-item" data-id="{{item.id}}" bindtap="detail">
+              <image src="{{baseUrl}}{{item.img}}" class="imgUrl"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="searchCon">
+        <icon type="search" size="30" />
+        <input type="text" placeholder="搜索好物"
+           placeholder-style="fontSize:12px" bindconfirm="searchFun"/>
+      </view>
+  </view>
+  <view class="syList clear">
+      <view class="syListDl" bindtap="detail" wx:for="{{syList}}" wx:key="index" data-id="{{item.id}}">
+        <view class="syListDt">
+          <image src="{{baseUrl}}{{item.img}}" ></image>
+        </view>
+        <view class="syListTitle">
+          <view class="text">{{item.shop_title}}</view>
+          <view class="text">{{item.title}}</view>
+          <view class="text"> <image src="../../assets/image/location.png"></image>{{item.juli}}</view>
+        </view>
+      </view>
+      <view class=""></view>
+	</view>
+  <view class="moreloading">
+    <view class="moreBtn" wx:if="{{more}}">
+      下拉加载更多<text class="iconfont iconxiajiantou" ></text>
+    </view>
+    <view class="moreBtn" wx:if="{{moreloading}}">
+      加载中<image src="../../assets/image/loading.gif"></image>
+    </view>
+    <view class="nomore" wx:if="{{nomore}}">
+      <text>我是有底线的</text>
+    </view>
+  </view>
+  <service qrcode="{{qrcode}}" kefuHeadimg="{{kefuHeadimg}}"/>
+  
+</view>
